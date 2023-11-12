@@ -81,3 +81,26 @@ var sonuclar11 = from urun in urunler
 foreach (var k in sonuclar11)
     Console.WriteLine("Kategorisi: " + k.Key + " olanların toplamı: " + k.ToplamFiyat);
 
+Console.WriteLine("----------------");
+var sonuclar12 = (from urun in urunler
+                  select urun.KatagoriId).Distinct();
+Console.WriteLine("Ürün bulunan katagoriler");
+foreach (var k in sonuclar12)
+    Console.Write(k + " ");
+Console.WriteLine();
+Console.WriteLine("-----------------------");
+object[] numbers = { 2, null, "ali", 'C', 5, 3.0, "Veli", 3};
+Console.WriteLine(numbers.OfType<double>().First(u => u > 1.0));
+Console.WriteLine("----------------------");
+//var sonuclar13 = from u in urunler
+//                 join k in kategoriler
+//                 on u.KatagoriId equals k.KategoriId
+//                 select new { u.UrunAdi, k.KategoriId, u.Fiyat };
+//var sonuclar13 = urunler.Join(kategoriler,
+//    u => u.KatagoriId,
+//    k => k.KategoriId,
+//    (u, k) => new { u.UrunId });
+
+//foreach (var k in sonuclar13)
+//    Console.WriteLine(k);
+

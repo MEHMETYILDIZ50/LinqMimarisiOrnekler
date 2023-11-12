@@ -36,7 +36,7 @@ namespace YardimciSiniflar
                 new Kategori{KategoriAdi="Elektronik", KategoriId=3},
                 new Kategori{KategoriAdi="Beyaz Eşya", KategoriId=4},
                 new Kategori{KategoriAdi="Mobilya", KategoriId=6},
-                new Kategori{KategoriAdi="DVD Medya", KategoriId=7},
+//                new Kategori{KategoriAdi="DVD Medya", KategoriId=7},
 
             };
             return null;
